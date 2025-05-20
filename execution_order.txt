@@ -1,0 +1,19 @@
+# 1. Run Spark-based preprocessing
+python etl/spark_etl.py
+
+# 2. Train the model
+python model/train.py
+
+# 3. Run prediction on test data and save submission
+python model/predict.py
+
+# 4. Start the api 
+uvicorn api.app:app --reload
+
+# 5. Build and run docker
+docker build -t vehicle-insurance-api -f docker/Dockerfile .
+docker run -p 80:80 vehicle-insurance-api
+
+# 6. Apply Kubernetes
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
