@@ -61,7 +61,7 @@ This generates predictions on the test set and saves them as predictions.csv.
 
 ### Example Request
 
-POST /predict
+<pre> POST /predict
 {
   "Gender": "Male",
   "Age": 35,
@@ -73,13 +73,13 @@ POST /predict
   "Annual_Premium": 35000,
   "Policy_Sales_Channel": 26,
   "Vintage": 200
-}
+} </pre>pre>
 
 ### Example Response
 
-{
+<pre>{
   "prediction": 1
-}
+}</pre>pre>
 
 ---
 
